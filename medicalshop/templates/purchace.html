@@ -1,0 +1,50 @@
+{% extends 'medicalmaster.html' %}
+{% block content %}
+{% load static %}
+
+
+
+
+<div class="container" style="margin-top: 50px;">
+    <div class="row" style="margin: 20px;">
+        <div class="col-lg-12">
+            <div class="card shadow border-0 mb-7">
+                <div class="card-header">
+                    <h5 class="mb-0">Purchace  List</h5>
+                </div>
+                <div class="table-responsive">
+                    <table class="table table-hover table-nowrap">
+                        <thead class="thead-light">
+                            <tr>
+
+                                <th scope="col"> Medicine Name</th>
+
+                                <th scope="col">Quantity</th>
+
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                {% for i in purchacestock %}
+                            <tr>
+
+                                <td> {{ i.medicine_name }} </td>
+                                <td> {{ i.medicine_qunatity }} </td>
+
+
+                            </tr>
+                            {% endfor %}
+
+
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+{% endblock %}

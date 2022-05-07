@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <title>create exam</title>
+   
+    </style>
+  </head>
+  <body>
+    <div class="container">
+        <div class="row">
+          <!-- <div class="col-lg-12">
+            <img src="https://images.unsplash.com/photo-1580191947416-62d35a55e71d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80" class="w-50 mx-auto" alt="">
+          </div> -->
+            <div class="col-lg-12">
+                
+                <table  class="table table-hover table-striped table-bordered nowrap"
+                style="width:100%">
+                <thead class="thead-light head">
+                    <tr>
+                        <th style="font-weight: 900; background-color: bisque;">Name</th>
+                        
+                        <th style="font-weight: 900; background-color: bisque;"> Exam</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for i in user %}
+                    <tr>
+
+                        <td> {{ i.name }} </td>
+                        
+                        <td>
+                            <select id="inputState" name="select" class="form-control"  onchange="location = this.value;">
+                            <option selected>Choose...</option>
+                            {% for j in obj %}
+                            <option  value="exam/{{ j.title }},{{ i.id }}">{{ j.title }}</option>
+                            {% endfor %}
+                          </select></td>
+                        <!-- <td > <a href="exam/{{ j.title }}" class="btn btn-sm btn-neutral">View</a> </td> -->
+
+                    </tr>
+                   
+                    {% endfor %}
+                </tbody>
+            </table>
+
+
+            </div>
+        </div>
+    </div>
+    
+  
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>

@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        body{
+            background-color: #eee
+        }
+        .nav-link{
+            font-weight: 500;
+            font-size: large;
+            
+        }
+        .nav{
+            font-weight: 700;
+            font-size: x-large;
+        }
+
+        .bg{
+            background-image: linear-gradient(to right, #DC2424, #4A569D);
+        }
+
+        /* footer */
+        @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@700&display=swap');
+
+body {
+    background-color: #f3f6fd;
+    font-size: 13px;
+    font-weight: bold;
+    color: rgb(73, 121, 170)
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0
+}
+
+ul>li {
+    padding: 4px;
+    color: #C5CAE9
+}
+
+ul>li:hover {
+    color: #957bda;
+    cursor: pointer
+}
+
+hr {
+    border-width: 3px
+}
+
+.card {
+    padding: 2% 7%
+}
+
+.social>i {
+    padding: 1%;
+    font-size: 15px
+}
+
+.social>i:hover {
+    color: #957bda;
+    cursor: pointer
+}
+
+.policy>div {
+    padding: 4px
+}
+
+.heading {
+    font-family: 'Titillium Web', sans-serif;
+    color: black
+}
+
+.divider {
+    border-top: 2px solid
+}
+        /* end footer */
+    </style>
+    <title>Medical shop</title>
+  </head>
+  <body>
+ <div class="container-fluid">
+     <div class="row">
+         <div class="col-lg-12">
+            <nav class="navbar navbar-expand-lg navbar-light bg">
+                <a class="navbar-brand nav" href="#">Medico</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="/medical/home">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active ">
+                      <a class="nav-link "  href="/medical/addproduct">Add Product</a>
+                    </li>
+                    <li class="nav-item active">
+                      <a class="nav-link" href="/medical/bill">Bill Generate</a>
+                    </li>
+                    <li class="nav-item active">
+                      <a class="nav-link " href="/medical/Purchase">Purchase List</a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+         </div>
+     </div>
+     {% block content %}
+     {% endblock %}
+ 
+ </div>
+
+ <!-- footer -->
+ <div class="container-fluid mt-5 ">
+  <div class="card bg-white mx-5 bg">
+      <div class="row mb-4">
+          <div class="col-md-4 col-sm-4 col-xs-4">
+              <div class="footer-text pull-left">
+                  <div class="d-flex">
+                      <h1 style="color: #957bda">Medico</h1>
+                  </div>
+                  <p class="card-text" style="color: white;">Medico Pharmacare is founded by a group of senior doctors and entrepreneurs, who have had most of their career abroad, along with a group of aspiring youngsters. The experience of doctors combined with the enthusiasm of youngsters and dedication of employees fuel the commitment towards social responsibility.</p>
+                  <div class="social mt-2 mb-3"> <i class="fa fa-facebook-official fa-lg"></i> <i class="fa fa-instagram fa-lg"></i> <i class="fa fa-twitter fa-lg"></i> <i class="fa fa-linkedin-square fa-lg"></i> <i class="fa fa-facebook"></i> </div>
+              </div>
+          </div>
+          <div class="col-md-2 col-sm-2 col-xs-2"></div>
+          <div class="col-md-2 col-sm-2 col-xs-2">
+              <h5 class="heading">Services</h5>
+              <ul>
+                  <li>Home</li>
+                  <li>Add Product</li>
+                  <li>Bill Generate</li>
+                  <li>Purchase List</li>
+              </ul>
+          </div>
+
+          <div class="col-md-2 col-sm-2 col-xs-2">
+              <h5 class="heading">Company</h5>
+              <ul class="card-text">
+                  <li>About Us</li>
+                  <li>Blog</li>
+                  <li>Contact</li>
+                  <li>Join Us</li>
+              </ul>
+          </div>
+      </div>
+      <div class="divider mb-4"> </div>
+      <div class="row" style="font-size:10px;">
+          <div class="col-md-6 col-sm-6 col-xs-6">
+              <div class="pull-left">
+                  <p style="color: white;"><i class="fa fa-copyright"></i> 2020 medicodesign</p>
+              </div>
+          </div>
+          <div class="col-md-6 col-sm-6 col-xs-6">
+              <div class="pull-right mr-4 d-flex policy">
+                  <div style="color: white;">Terms of Use</div>
+                  <div style="color: white;">Privacy Policy</div>
+                  <div style="color: white;">Cookie Policy</div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+ <!-- end footer -->
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
